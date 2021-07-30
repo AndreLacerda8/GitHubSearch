@@ -1,0 +1,211 @@
+.user{
+    width: min(90rem, 100vw);
+    height: 100%;
+
+    color: var(--gray);
+}
+
+.user > header{
+    width: 100%;
+    padding: 4.2rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user > header .logo-user{
+    display: flex;
+    align-items: center;
+}
+
+.user > header .logo-user > img{
+    width: 5.6rem;
+    margin-right: 1rem;
+}
+
+.user > header .logo-user .text-logo > img{
+    width: 10.4rem;
+    padding-top: 1rem;
+}
+
+.user > header .logo-user .text-logo > p{
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--purple);
+    font-family: 'Poppins', sans-serif;
+    margin-left: 2.8rem;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2.2rem;
+}
+
+.profile > a > img{
+    width: 14.6rem;
+    height: 14.6rem;
+    border-radius: 50%;
+}
+
+.profile .profile-infos{
+    margin: 0 4.2rem 0 3.8rem;
+}
+
+.profile .profile-infos > h3{
+    color: var(--purple);
+    font-size: 2.4rem;
+}
+
+.profile .profile-infos > span{
+    font-size: 1.6rem;
+}
+
+.profile .profile-infos .user-about{
+    max-width: 25rem;
+    margin-top: 2rem;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile .profile-infos .user-about span{
+    font-size: 1.6rem;
+
+    display: flex;
+    align-items: center;
+
+    margin-right: 1rem;
+    margin-bottom: .7rem;
+}
+
+.profile .profile-infos .user-about img{
+    margin-right: .5rem;
+    width: 1.5rem;
+}
+
+.profile .profile-infos .user-about #local > img{
+    width: 1.2rem;
+}
+
+.profile .repositories-total{
+    padding: 1.5rem 1.9rem 1rem;
+    background-color: var(--dark);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.profile .repositories-total p{
+    font-size: 1.6rem;
+    margin-bottom: .8rem;
+}
+
+.profile .repositories-total span{
+    font-size: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile .repositories-total span > img{
+    width: 2rem;
+    margin-right: .9rem;
+}
+
+
+.repositories{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+
+    margin-top: 8rem;
+    margin-bottom: 3rem;
+}
+
+.repositories .card-repository{
+    width: 29rem;
+    padding: 1.5rem 1.2rem 1rem 1.9rem;
+    border-radius: 5px;
+    background-color: var(--dark);
+}
+
+.repositories .card-repository h3{
+    font-size: 1.8rem;
+    margin-bottom: .8rem;
+}
+
+.repositories .card-repository p{
+    font-size: 1.4rem;
+    margin-bottom: 3.1rem;
+}
+
+.repositories .card-repository .infos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.repositories .card-repository .infos > span{
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.repositories .card-repository .infos img{
+    width: 1.5rem;
+    margin-right: .6rem;
+}
+
+@media(max-width: 1000px){
+    .user > header{
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .repositories{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .repositories .card-repository{
+        justify-self: center;
+    }
+
+}
+
+@media(max-width: 700px){
+    .profile{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .profile .profile-infos{
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .profile .profile-infos .user-about{
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .repositories{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 500px){
+    .profile{
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 350px){
+    .user > header{
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .repositories .card-repository{
+        width: 90%
+    }
+}
